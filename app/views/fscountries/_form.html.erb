@@ -1,0 +1,26 @@
+<%= form_for @fscountry, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :name, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :ddi, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :ddi, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :currency, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :currency, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                fscountries_path, :class => 'btn' %>
+  </div>
+<% end %>
